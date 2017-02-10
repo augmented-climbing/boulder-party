@@ -1,0 +1,16 @@
+{
+  "name": "boulder-party",
+  "version": "0.0.0",
+  "description": "Augmented Bouldering Mini-Games.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augmented-climbing/boulder-party.git"
+  },
+  "author": "Grant C Freeman",
+  "license": "BSD-2-Clause",
+  "private": true
+}
