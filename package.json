@@ -4,6 +4,9 @@
   "description": "Augmented Bouldering Mini-Games.",
   "main": "main.js",
   "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,5 +15,19 @@
   },
   "author": "Grant C Freeman",
   "license": "BSD-2-Clause",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "electron": "1.4.15",
+    "parse5": "2.2.2",
+    "rollup": "0.41.4",
+    "rollup-plugin-alias": "1.2.0",
+    "rollup-plugin-commonjs": "7.0.0",
+    "rollup-plugin-node-resolve": "2.0.0",
+    "rollup-plugin-vue": "2.2.20"
+  },
+  "dependencies": {
+    "vue": "2.1.10",
+    "vue-router": "2.2.0",
+    "vue-template-compiler": "2.1.10"
+  }
 }
