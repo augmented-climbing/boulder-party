@@ -7,7 +7,10 @@
 
 <script>
   export default {
-    name: 'speed-boulder'
+    name: 'speed-boulder',
+    created () {
+      this.$store.commit('game/playSB')
+    }
   }
 </script>
 
