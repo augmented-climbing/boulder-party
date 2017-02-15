@@ -1,0 +1,14 @@
+{
+  "name": "boulder-party",
+  "version": "0.0.0",
+  "description": "Augmented climbing games",
+  "main": "./dist/main.js",
+  "dependencies": {
+    "vue": "^2.1.10",
+    "vue-electron": "^1.0.6",
+    "vue-router": "^2.1.2",
+    "vuex": "^2.1.1"
+  },
+  "devDependencies": {},
+  "author": "Grant Freeman <grantfree035@gmail.com>"
+}
