@@ -1,8 +1,15 @@
 <template>
-  <ul>
-    <li><router-link to="/sb">Speed Boulder</router-link></li>
-  </ul>
+  <div>
+  <h1>Speed Boulder</h1>
+  <router-link to="/">Exit</router-link>
+  </div>
 </template>
+
+<script>
+  export default {
+    name: 'speed-boulder'
+  }
+</script>
 
 <style scoped>
   a {
