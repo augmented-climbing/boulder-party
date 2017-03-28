@@ -1,16 +1,16 @@
 <template>
   <div>
   <h1>Speed Boulder</h1>
-  <router-link to="/">Exit</router-link>
+    <ul>
+      <li><router-link to="/sb/roster">Play</router-link></li>
+      <li><router-link to="/">Exit</router-link></li>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'speed-boulder',
-    created () {
-      this.$store.commit('game/playSB')
-    }
+    name: 'speed-boulder'
   }
 </script>
 
@@ -21,7 +21,11 @@
   }
 
   a:hover {
-    color: rgb(40, 56, 76);
+    color: rgb(61, 216, 141);
+  }
+
+  a.quit:hover {
+    color: rgb(228, 98, 69);
   }
 
   ul {
@@ -29,5 +33,9 @@
     margin-top: 10px;
   }
 
-  li { display: inline-block; }
+  li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 </style>

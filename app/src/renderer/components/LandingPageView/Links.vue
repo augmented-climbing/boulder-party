@@ -1,17 +1,13 @@
 <template>
   <ul>
-    <li><router-link to="/sb">Speed Boulder</router-link></li>
-  </ul>
+  <li><router-link to="/sb">Speed Boulder</router-link></li>
+</ul>
 </template>
 
 <style scoped>
   a {
     color: rgb(50, 174, 110);
     text-decoration: none;
-  }
-
-  a:hover {
-    color: rgb(40, 56, 76);
   }
 
   ul {

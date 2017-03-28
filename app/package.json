@@ -4,6 +4,8 @@
   "description": "Augmented climbing games",
   "main": "./dist/main.js",
   "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui-dist": "^1.12.1",
     "vue": "^2.1.10",
     "vue-electron": "^1.0.6",
     "vue-router": "^2.1.2",

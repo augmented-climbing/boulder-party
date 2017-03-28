@@ -20,9 +20,9 @@ let rendererConfig = {
     rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader'
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
         })
       },
       {
@@ -78,9 +78,14 @@ let rendererConfig = {
       template: './app/index.ejs',
       appModules: process.env.NODE_ENV !== 'production'
         ? path.resolve(__dirname, 'app/node_modules')
-        : false,
+        : false
     }),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'global.jQuery': 'jquery'
+    })
   ],
   output: {
     filename: '[name].js',
@@ -90,7 +95,8 @@ let rendererConfig = {
   resolve: {
     alias: {
       'components': path.join(__dirname, 'app/src/renderer/components'),
-      'renderer': path.join(__dirname, 'app/src/renderer')
+      'renderer': path.join(__dirname, 'app/src/renderer'),
+      'jquery-ui': 'jquery-ui-dist/jquery-ui.js'
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node'],
     modules: [
