@@ -3,7 +3,7 @@ const namespaced = true
 const state = {
   points: [],
   draggable: true,
-  pointWidth: 50
+  diameter: 50
 }
 
 const mutations = {
@@ -27,10 +27,8 @@ const mutations = {
     state.points = []
   },
 
-  draggable (state, {draggable}) {
-    if (typeof draggable === 'boolean') {
-      state.draggable = draggable
-    }
+  diameter (state) {
+    return state.diameter
   }
 }
 

@@ -1,15 +1,14 @@
 <template>
-  <div class="shape"
-    @dblclick.stop="deletePoint({point})"
-    v-draggable
-    :style="location">
-    <div class="text">{{ point.id }}</div>
-  </div>
+  <vue-draggable-resizable :w="{{ diameter }}" :h="{{ diameter }}" :parent="true" :@dblclick.stop="deletePoint({point})">
+    <div class="shape">
+      <div class="text">{{ point.id }}</div>
+    </div>
+  </vue-draggable-resizable>
 </template>
 
 <script>
   import { mapMutations, mapState } from 'vuex'
-  import 'jquery-ui'
+  import VueDraggableResizable from 'vue-draggable-resizable'
 
   export default {
     name: 'Point',
@@ -23,25 +22,13 @@
         }
       }
     },
+    components: {
+      VueDraggableResizable
+    },
     computed: {
       ...mapState({
         route: state => state.route
       })
-    },
-    directives: {
-      draggable: {
-        bind: function (el, binding, vnode) {
-          $(document).ready(() => {
-            $(vnode.elm).draggable({
-              disabled: !vnode.context.route.draggable
-            })
-          })
-        },
-
-        componentUpdated: function (el, binding, vnode) {
-          $(vnode.elm).draggable(vnode.context.route.draggable ? 'enable' : 'disable')
-        }
-      }
     },
     methods: {
       ...mapMutations('route', [
@@ -56,8 +43,8 @@
     border-radius: 50%;
     background: white;
     color: black;
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
   }
 
   .text {

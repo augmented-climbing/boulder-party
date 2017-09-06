@@ -13,7 +13,7 @@
 
 <script>
   import { mapState } from 'vuex'
-  import Point from './SBRouteView/Point'
+  import Point from 'SBRouteView/Point'
 
   export default {
     components: {
